@@ -55,14 +55,14 @@ def minSetSize(arr):
 
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        c=Counter(arr)
-        N=len(arr)
-        n=0
-        ans=0
-        for k,val in sorted(c.items(),key=lambda x: -x[1]):
-            n+=val
-            ans+=1
-            if n>=(N//2):
+        c = Counter(arr)
+        N = len(arr)
+        n = 0
+        ans = 0
+        for k, val in sorted(c.items(), key = lambda x: -x[1]):
+            n += val
+            ans += 1
+            if n >= (N//2):
                 break
         return ans
 
